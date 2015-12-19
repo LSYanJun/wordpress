@@ -1,6 +1,10 @@
 ChangeLog
 =========
 
+Version 1.0.0.3
+	
+	i) Fixed Disappeared Menu Setting Option(Due to WP 4.4)
+	
 Version 1.0.0.2
 
 	i) Added New Skins.

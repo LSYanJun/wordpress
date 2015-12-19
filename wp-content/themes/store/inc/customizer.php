@@ -102,15 +102,25 @@ function store_customize_register( $wp_customize ) {
 	);
 	
 	//Settings for Nav Area
+	$wp_customize->add_section(
+	    'store_menu_basic',
+	    array(
+	        'title'     => __('Menu Settings','store'),
+	        'priority'  => 0,
+	        'panel'     => 'nav_menus'
+	    )
+	);
+	
+	
 	$wp_customize->add_setting( 'store_disable_nav_desc' , array(
-	    'default'     => false,
+	    'default'     => true,
 	    'sanitize_callback' => 'store_sanitize_checkbox',
 	) );
 	
 	$wp_customize->add_control(
 	'store_disable_nav_desc', array(
 		'label' => __('Disable Description of Menu Items','store'),
-		'section' => 'nav',
+		'section' => 'store_menu_basic',
 		'settings' => 'store_disable_nav_desc',
 		'type' => 'checkbox'
 	) );
